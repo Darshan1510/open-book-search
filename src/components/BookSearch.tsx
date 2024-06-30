@@ -10,6 +10,7 @@ const BookSearch: React.FC = () => {
   const [sortByYear, setSortByYear] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalResults, setTotalResults] = useState<number>(0);
+  const [showBookCovers, setShowBookCovers] = useState<boolean>(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -110,14 +111,24 @@ const BookSearch: React.FC = () => {
             placeholder="Enter book name"
           />
         </Form.Group>
-        <Form.Check
-          className="mt-1"
-          type="switch"
-          id="sort-switch"
-          label={"Sort by Year"}
-          checked={sortByYear}
-          onChange={handleSortToggle}
-        />
+        <div className="d-flex gap-3">
+          <Form.Check
+            className="mt-1"
+            type="switch"
+            id="sort-switch"
+            label={"Sort by Year"}
+            checked={sortByYear}
+            onChange={handleSortToggle}
+          />
+          <Form.Check
+            className="mt-1 mr-2"
+            type="switch"
+            id="show-book-covers"
+            label={"Show book covers"}
+            checked={showBookCovers}
+            onChange={() => setShowBookCovers(!showBookCovers)}
+          />
+        </div>
       </Form>
       <hr />
       <Row>
@@ -125,6 +136,14 @@ const BookSearch: React.FC = () => {
         {results.map((book, index) => (
           <Col md={4} key={index} className="mb-3">
             <Card className="h-100">
+              {showBookCovers && book.cover_i && (
+                <Card.Img
+                  variant="top"
+                  height="500"
+                  width="100"
+                  src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
+                />
+              )}
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>

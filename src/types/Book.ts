@@ -10,5 +10,6 @@ export interface OpenLibraryResponse {
     first_publish_year?: number;
     isbn?: string[];
     number_of_pages_median?: number;
+    cover_i?: number;
   }
   
