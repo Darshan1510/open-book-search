@@ -31,7 +31,7 @@ Visit the [Live Demo](https://openbooksearch.netlify.app/) to see the applicatio
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/open-book-search.git
+   git clone https://github.com/Darshan1510/open-book-search.git
    cd open-book-search
    ```
 
