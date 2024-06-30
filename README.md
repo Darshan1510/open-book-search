@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# Book Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web application built with TypeScript, React, and React Bootstrap that allows users to search for books using the Open Library API. Users can enter a book name, toggle sorting by relevance or year of publication, and navigate through paginated search results.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+Visit the [Live Demo](https://openbooksearch.netlify.app/) to see the application in action.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Search**: Enter a book name to search for relevant books using the Open Library API.
+- **Sorting**: Toggle between sorting search results by relevance or year of publication.
+- **Pagination**: Navigate through paginated search results.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **TypeScript**: Provides type safety and improves developer productivity.
+- **React**: JavaScript library for building user interfaces.
+- **React Bootstrap**: Bootstrap components built for React, providing ready-to-use UI elements.
+- **Axios**: Promise-based HTTP client for making API requests.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js and npm (Node Package Manager) installed on your local machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/yourusername/open-book-search.git
+   cd open-book-search
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Running the Application
 
-## Learn More
+1. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+### Usage
+
+- Enter a book name in the search box and it will show you the appropriate results.
+- Toggle the switch to sort search results by relevance or year of publication.
+- Navigate through paginated search results using the pagination controls.
+
+### Deployment
+
+- To deploy this application, build the project for production:
+
+  ```bash
+  npm run build
+  ```
+
+- Deploy the build folder to your hosting service.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Acknowledgments
+
+- [Open Library API](https://openlibrary.org/developers/api)
+- [React](https://react.dev/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+
